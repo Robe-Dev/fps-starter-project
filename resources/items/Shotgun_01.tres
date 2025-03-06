@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Firearm_Resource" load_steps=2 format=3 uid="uid://cjnv5htnyynlb"]
+
+[ext_resource type="Script" uid="uid://5cnpdq37unq4" path="res://scripts/resources/weapon_resources/firearm_resource.gd" id="1_r64e2"]
+
+[resource]
+script = ExtResource("1_r64e2")
+Shoot_Anim = "Shotgun_01_Shoot"
+Reload_Anim = "Shotgun_01_Reload"
+Out_Of_Ammo_Anim = ""
+Current_Ammo = 8
+Reserve_Ammo = 32
+Magazine = 8
+Weapon_Fire_Mode = 2
+Weapon_Name = "Shotgun_01"
+Equip_Anim = "Shotgun_01_Equip"
+Unequip_Anim = "Shotgun_01_Unequip"
+Discard_Anim = "RESET"
+Durability = 100.0
+Wear_Per_Use = 0.25
+slot = 0

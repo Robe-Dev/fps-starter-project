@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Firearm_Resource" load_steps=2 format=3 uid="uid://btgkdw7ldm0qn"]
+
+[ext_resource type="Script" uid="uid://5cnpdq37unq4" path="res://scripts/resources/weapon_resources/firearm_resource.gd" id="1_q2y0s"]
+
+[resource]
+script = ExtResource("1_q2y0s")
+Shoot_Anim = "SniperRifle_01_Shoot"
+Reload_Anim = "SniperRifle_01_Reload"
+Out_Of_Ammo_Anim = ""
+Current_Ammo = 1
+Reserve_Ammo = 32
+Magazine = 1
+Weapon_Fire_Mode = 2
+Weapon_Name = "SniperRifle_01"
+Equip_Anim = "SniperRifle_01_Equip"
+Unequip_Anim = "SniperRifle_01_Unequip"
+Discard_Anim = "RESET"
+Durability = 100.0
+Wear_Per_Use = 0.25
+slot = 0

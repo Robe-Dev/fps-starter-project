@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Firearm_Resource" load_steps=2 format=3 uid="uid://4hwssqlwj22k"]
+
+[ext_resource type="Script" uid="uid://5cnpdq37unq4" path="res://scripts/resources/weapon_resources/firearm_resource.gd" id="1_ecdn1"]
+
+[resource]
+script = ExtResource("1_ecdn1")
+Shoot_Anim = "SMG_01_Shoot"
+Reload_Anim = "SMG_01_Reload"
+Out_Of_Ammo_Anim = ""
+Current_Ammo = 15
+Reserve_Ammo = 45
+Magazine = 15
+Weapon_Fire_Mode = 0
+Weapon_Name = "SMG_01"
+Equip_Anim = "SMG_01_Equip"
+Unequip_Anim = "SMG_01_Unequip"
+Discard_Anim = "RESET"
+Durability = 100.0
+Wear_Per_Use = 0.25
+slot = 1

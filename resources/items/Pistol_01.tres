@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Firearm_Resource" load_steps=2 format=3 uid="uid://bcnsi11tn4ani"]
+
+[ext_resource type="Script" uid="uid://5cnpdq37unq4" path="res://scripts/resources/weapon_resources/firearm_resource.gd" id="1_4nmlv"]
+
+[resource]
+script = ExtResource("1_4nmlv")
+Shoot_Anim = "Pistol_01_Shoot"
+Reload_Anim = "Pistol_01_Reload"
+Out_Of_Ammo_Anim = ""
+Current_Ammo = 12
+Reserve_Ammo = 48
+Magazine = 12
+Weapon_Fire_Mode = 2
+Weapon_Name = "Pistol_01"
+Equip_Anim = "Pistol_01_Equip"
+Unequip_Anim = "Pistol_01_Unequip"
+Discard_Anim = "RESET"
+Durability = 100.0
+Wear_Per_Use = 0.125
+slot = 1

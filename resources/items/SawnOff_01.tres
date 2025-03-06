@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Firearm_Resource" load_steps=2 format=3 uid="uid://cncy7gvlsq2dc"]
+
+[ext_resource type="Script" uid="uid://5cnpdq37unq4" path="res://scripts/resources/weapon_resources/firearm_resource.gd" id="1_tmkjx"]
+
+[resource]
+script = ExtResource("1_tmkjx")
+Shoot_Anim = "SawnOff_01_Shoot"
+Reload_Anim = "SawnOff_01_Reload"
+Out_Of_Ammo_Anim = ""
+Current_Ammo = 2
+Reserve_Ammo = 24
+Magazine = 2
+Weapon_Fire_Mode = 2
+Weapon_Name = "SawnOff_01"
+Equip_Anim = "SawnOff_01_Equip"
+Unequip_Anim = "SawnOff_01_Unequip"
+Discard_Anim = "RESET"
+Durability = 100.0
+Wear_Per_Use = 0.375
+slot = 1

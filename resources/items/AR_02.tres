@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Firearm_Resource" load_steps=2 format=3 uid="uid://cgmoiyx0y3l4f"]
+
+[ext_resource type="Script" uid="uid://5cnpdq37unq4" path="res://scripts/resources/weapon_resources/firearm_resource.gd" id="1_h1dag"]
+
+[resource]
+script = ExtResource("1_h1dag")
+Shoot_Anim = "AR_02_Shoot"
+Reload_Anim = "AR_02_Reload"
+Out_Of_Ammo_Anim = ""
+Current_Ammo = 30
+Reserve_Ammo = 60
+Magazine = 30
+Weapon_Fire_Mode = 0
+Weapon_Name = "AR_02"
+Equip_Anim = "AR_02_Equip"
+Unequip_Anim = "AR_02_Unequip"
+Discard_Anim = "RESET"
+Durability = 100.0
+Wear_Per_Use = 0.125
+slot = 0
