@@ -11,13 +11,11 @@ var state: String = "patrol"
 var current_patrol_index: int = 0
 
 # Follow parameters
-@export var follow_distance: float = 10.0
-@export var close_distance: float = 5.0
+@export var in_reach_distance: float = 5.0
 @export var speed: float = 2.5
 @export var detection_radius: float = 15.0
 @export var field_of_view_angle: float = 225.0  # Field of view angle in degrees
 
- 
 @export var approximate_mass : float = 80.0
 
 # Reference to targets
@@ -37,26 +35,25 @@ func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
-	else :
-		match state:
-			"patrol":
-				patrol(delta)
-				check_for_targets()
-			"follow":
-				follow(delta)
-				check_for_targets()
+	
+	match state:
+		"patrol":
+			patrol(delta)
+			check_for_targets()
+		"follow":
+			follow(delta)
+			check_for_targets()
 	
 	look_at_target(delta)
 	
-	push_away_rigid_bodies()
-	
 	velocity = root_velocity
+	
+	push_away_rigid_bodies()
 	move_and_slide()
 
 func set_root_motion_animation(delta : float, movement_amount : float) -> void:
 	if target_direction.length() > 0:
 		movement = lerp(movement, movement_amount, 3.75 * delta)
-		
 		if tween:
 			tween.kill()
 			tween = 0
@@ -78,7 +75,6 @@ func patrol(delta: float):
 	var target = patrol_points[current_patrol_index]
 	navigation_agent_3d.target_position = target.global_position
 	target_direction = (navigation_agent_3d.get_next_path_position() - global_position).normalized()
-	target_direction.y = 0.0
 	
 	set_root_motion_animation(delta, .5)
 	
@@ -98,12 +94,15 @@ func follow(delta: float):
 		if distance < closest_distance and is_target_in_fov(target) and is_target_visible(target):
 			closest_distance = distance
 			closest_target = target
+		else :
+			state = "patrol"
+		
 	if closest_target: 
-		if closest_distance < follow_distance:
+		if closest_distance < detection_radius:
 			navigation_agent_3d.target_position = closest_target.global_position
 			target_direction = (navigation_agent_3d.get_next_path_position() - global_position).normalized()
-			target_direction.y = 0.0
 			set_root_motion_animation(delta, 1.0)
+			print("gate 1")
 		else :
 			state = "patrol"
 	else:
@@ -114,6 +113,7 @@ func check_for_targets():
 		if global_transform.origin.distance_to(target.global_transform.origin) < detection_radius and is_target_in_fov(target) and is_target_visible(target):
 			state = "follow"
 			return
+		
 	if state == "follow":
 		state = "patrol"
 
@@ -141,7 +141,7 @@ func push_away_rigid_bodies():
 			c.get_collider().apply_impulse(push_dir * velocity_diff_in_push_dir * push_force, c.get_position() - c.get_collider().global_position)
 
 func look_at_target(delta : float) -> void:
-		if target_direction.length() > 0.1:
+		if target_direction.length() > 0:
 			rotation.y = lerp_angle(rotation.y, atan2(target_direction.x, target_direction.z), delta * 3.75)
 
 # Check if the target is visible using a raycast
@@ -151,7 +151,7 @@ func is_target_visible(target: Node3D) -> bool:
 	
 	# Perform a raycast
 	var space_state = get_world_3d().direct_space_state
-	var query = PhysicsRayQueryParameters3D.create(from_position, to_position, 1)
+	var query = PhysicsRayQueryParameters3D.create(from_position, to_position)
 	query.exclude = [self]
 	var result = space_state.intersect_ray(query)
 	
