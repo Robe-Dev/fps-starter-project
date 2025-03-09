@@ -62,6 +62,18 @@ tracks/2/keys = {
 "update": 1,
 "values": [true]
 }
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Bullet_Point:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.3),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.902486, 0.158646, 1.49012e-08)]
+}
 
 [sub_resource type="Animation" id="Animation_ntep6"]
 resource_name = "AR_02_Reload"
@@ -199,6 +211,18 @@ tracks/2/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Bullet_Point:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.3),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.465343, 0.144516, -1.49012e-08)]
 }
 
 [sub_resource type="Animation" id="Animation_o0kpk"]
@@ -386,6 +410,18 @@ tracks/6/keys = {
 "update": 1,
 "values": [false]
 }
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Bullet_Point:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.485196, 0.144516, -1.49012e-08)]
+}
 
 [sub_resource type="Animation" id="Animation_rhkog"]
 resource_name = "Revolver_01_Equip"
@@ -426,6 +462,18 @@ tracks/2/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Bullet_Point:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.3),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.438635, 0.209329, -1.49012e-08)]
 }
 
 [sub_resource type="Animation" id="Animation_aaxyo"]
@@ -567,6 +615,18 @@ tracks/2/keys = {
 "update": 1,
 "values": [true]
 }
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Bullet_Point:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.3),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.666754, 0.154836, -1.49012e-08)]
+}
 
 [sub_resource type="Animation" id="Animation_d6h0q"]
 resource_name = "SMG_01_Reload"
@@ -706,6 +766,18 @@ tracks/2/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Bullet_Point:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.3),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.820498, 0.203629, -1.49012e-08)]
 }
 
 [sub_resource type="Animation" id="Animation_qy74o"]
@@ -847,6 +919,18 @@ tracks/2/keys = {
 "update": 1,
 "values": [true]
 }
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Bullet_Point:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.3),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.949377, 0.163301, 1.49012e-08)]
+}
 
 [sub_resource type="Animation" id="Animation_ajqxs"]
 resource_name = "Shotgun_01_Reload"
@@ -986,6 +1070,18 @@ tracks/2/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Bullet_Point:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.3),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(1.31294, 0.166584, 1.49012e-08)]
 }
 
 [sub_resource type="Animation" id="Animation_wynqg"]
@@ -1137,20 +1233,21 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
 
 [node name="Camera3D" type="Camera3D" parent="Yaw/Pitch"]
 
-[node name="Inventory" type="Node3D" parent="Yaw/Pitch" node_paths=PackedStringArray("animation_player")]
+[node name="Inventory" type="Node3D" parent="Yaw/Pitch"]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.2, -0.3, -0.3)
 script = ExtResource("2_2l2rx")
-animation_player = NodePath("AnimationPlayer")
 weapon_resources = Array[ExtResource("3_58dyy")]([ExtResource("4_fygvp"), ExtResource("5_rxugu"), ExtResource("6_g5uiw"), ExtResource("7_dusa8"), ExtResource("8_1bs0s"), ExtResource("9_o1opk"), ExtResource("9_wcfu2")])
 start_weapons = Array[String](["AR_02", "Pistol_01", "Revolver_01", "SawnOff_01", "Shotgun_01", "SMG_01", "SniperRifle_01"])
 
+[node name="Bullet_Point" type="Marker3D" parent="Yaw/Pitch/Inventory"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.485196, 0.144516, -1.49012e-08)
+
 [node name="AR_02" type="Node3D" parent="Yaw/Pitch/Inventory"]
-transform = Transform3D(-3.49664e-06, -9.36921e-07, 1, -0.258819, 0.965926, 0, -0.965926, -0.258819, -3.61999e-06, 0, -0.25, 0)
+transform = Transform3D(-3.49664e-06, -9.36922e-07, 1, -0.258819, 0.965926, -5.05702e-13, -0.965926, -0.258819, -3.61999e-06, 0, -0.25, 0)
 visible = false
 
 [node name="AssaultRifle2_1" parent="Yaw/Pitch/Inventory/AR_02" instance=ExtResource("2_piuqs")]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
-visible = false
 
 [node name="Pistol_01" type="Node3D" parent="Yaw/Pitch/Inventory"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 0, 0)
@@ -1181,14 +1278,14 @@ visible = false
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 
 [node name="SniperRifle_01" type="Node3D" parent="Yaw/Pitch/Inventory"]
-transform = Transform3D(-3.49664e-06, -9.36921e-07, 1, -0.258819, 0.965926, 0, -0.965926, -0.258819, -3.61999e-06, 0, -0.4, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
 visible = false
 
 [node name="SniperRifle_1" parent="Yaw/Pitch/Inventory/SniperRifle_01" instance=ExtResource("7_h0i4b")]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 
 [node name="SMG_01" type="Node3D" parent="Yaw/Pitch/Inventory"]
-transform = Transform3D(0.991445, -0.130527, 0, 0.130527, 0.991445, 0, 0, 0, 1, 0.0171214, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 0, 0)
 visible = false
 
 [node name="SubmachineGun_1" parent="Yaw/Pitch/Inventory/SMG_01" instance=ExtResource("8_b8xad")]

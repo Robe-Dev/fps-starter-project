@@ -102,7 +102,6 @@ func follow(delta: float):
 			navigation_agent_3d.target_position = closest_target.global_position
 			target_direction = (navigation_agent_3d.get_next_path_position() - global_position).normalized()
 			set_root_motion_animation(delta, 1.0)
-			print("gate 1")
 		else :
 			state = "patrol"
 	else:

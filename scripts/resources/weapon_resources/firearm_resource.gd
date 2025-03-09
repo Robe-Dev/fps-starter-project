@@ -17,3 +17,6 @@ enum Fire_Mode{
 }
 
 @export var Weapon_Fire_Mode: Fire_Mode = Fire_Mode.Auto
+@export_flags("HitScan", "Projectile") var Bullet_Type
+@export var Weapon_Range : int
+@export var Damage : int

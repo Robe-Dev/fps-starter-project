@@ -136,7 +136,7 @@ size = Vector3(4, 4, 4)
 [node name="Player" parent="Actors" groups=["team1"] instance=ExtResource("2_r7osb")]
 
 [node name="ms_01" parent="Actors" node_paths=PackedStringArray("patrol_points") instance=ExtResource("5_uonpo")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -12)
+transform = Transform3D(-0.5, 0, -0.866025, 0, 1, 0, 0.866025, 0, -0.5, -10, 0, -12)
 patrol_points = [NodePath("../../PathFinding/Route/WayPoint_01"), NodePath("../../PathFinding/Route/WayPoint_02"), NodePath("../../PathFinding/Route/WayPoint_03"), NodePath("../../PathFinding/Route/WayPoint_04")]
 
 [node name="World" type="Node" parent="."]
